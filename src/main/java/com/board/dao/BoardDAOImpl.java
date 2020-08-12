@@ -27,5 +27,11 @@ public class BoardDAOImpl implements BoardDAO{
 	public List<BoardVO> list() throws Exception {
 		return sqlSession.selectList("boardMapper.list");
 	}
+	
+	//게시물 상세보기
+	@Override
+	public BoardVO read(int bno) throws Exception {
+		return sqlSession.selectOne("boardMapper.read", bno);
+	}
 
 }

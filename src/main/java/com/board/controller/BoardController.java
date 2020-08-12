@@ -41,9 +41,16 @@ public class BoardController {
 		logger.info("list");
 		
 		//service.list()에 담긴 데이터를 list 라는 이름으로 담을것이다
-		model.addAttribute("list",service.list());
-		
+		model.addAttribute("list",service.list());		
 		return "board/list";
+	}
+	
+	//게시물 상세 보기
+	@RequestMapping(value = "/readView" , method = RequestMethod.GET)
+	public String read(BoardVO boardVO, Model model) throws Exception{
+		logger.info("read");
+		model.addAttribute("read" , service.read(boardVO.getBno()));		
+		return "board/readView";
 	}
 	
 }

@@ -14,5 +14,11 @@
 	<select id="list" resultType="com.board.vo.BoardVO">
 		select bno,title,writer,regdate from mp_board order by bno desc
 	</select>
+	
+	<!-- 상세보기 -->
+	<select id="read" parameterType="int" resultType="com.board.vo.BoardVO">
+		select bno,title,content,writer,regdate from mp_board
+		where bno = #{bno}
+	</select>
    
 </mapper>
