@@ -1,0 +1,18 @@
+#table쿼리문
+create table mp_board(
+bno number not null,
+title varchar2(100) not null,
+content varchar2(300) not null,
+writer varchar2(100) not null,
+regdate date default sysdate,
+primary key(bno)
+);
+
+#시퀀스
+create sequence mp_board_seq
+start with 1
+increment by 1;
+
+#인서트
+insert into mp_board(bno,title,content,writer)
+values(mp_board_seq.nextval,'제목입니다','내용입니다','에이버리');
