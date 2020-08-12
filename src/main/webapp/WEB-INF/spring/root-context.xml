@@ -13,8 +13,8 @@
 	
 	<!-- 오라클 접속 -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"/>
-		<property name="url" value="jdbc:log4jdbc:oracle:thin:@localhost:1521/orcl"/>
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
 		<property name="username" value="c##shopping"/>
 		<property name="password" value="1234"/>
 	</bean>
