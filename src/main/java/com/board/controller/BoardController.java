@@ -53,6 +53,12 @@ public class BoardController {
 		return "board/readView";
 	}
 	
+	//게시판 수정뷰
+	
+	//게시판 수정
+	
+	//게시판 삭제
+	
 }
 
 
