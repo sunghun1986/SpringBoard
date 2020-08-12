@@ -21,7 +21,7 @@ public class BoardController {
 	BoardService service;
 	
 	//게시판 글 작성 화면
-	@RequestMapping(value = "/board/writerView" , method = RequestMethod.GET)
+	@RequestMapping(value = "/board/writeView" , method = RequestMethod.GET)
 	public void writerView() throws Exception{
 		logger.info("writeView");
 	}

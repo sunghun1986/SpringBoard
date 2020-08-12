@@ -7,7 +7,7 @@
 	<!-- 게시판 글 작성 -->
 	<insert id="insert">
 		insert into mp_board(bno,title,content,writer)
-		values(mp_board_seq.nextval,#{title},#{content},#{writer})
+		values( mp_board_seq.nextval,#{title},#{content},#{writer})
 	</insert>
    
 </mapper>

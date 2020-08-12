@@ -15,7 +15,7 @@ public class BoardDAOImpl implements BoardDAO{
 	
 	@Override
 	public void write(BoardVO boardVO) throws Exception {
-		sqlSession.insert("boardMapper", boardVO);
+		sqlSession.insert("boardMapper.insert", boardVO);
 	}
 
 }
