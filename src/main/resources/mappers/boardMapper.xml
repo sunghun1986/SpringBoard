@@ -9,5 +9,10 @@
 		insert into mp_board(bno,title,content,writer)
 		values( mp_board_seq.nextval,#{title},#{content},#{writer})
 	</insert>
+	
+	<!-- 게시판 목록 조회 -->
+	<select id="list" resultType="com.board.vo.BoardVO">
+		select bno,title,writer,regdate from mp_board order by bno desc
+	</select>
    
 </mapper>
